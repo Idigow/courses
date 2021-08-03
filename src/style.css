@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-size: 20px;
+    font-family: 'Amatic SC', cursive;
 }
 *{
     box-sizing: border-box;
