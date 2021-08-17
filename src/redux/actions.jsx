@@ -1,6 +1,6 @@
 export const addComment = (email, text, id) => {
   return (dispatch) => {
-    fetch(`http://localhost:3000/callback`, {
+    fetch(`http://localhost:3001/callback`, {
       method: "POST",
       body: JSON.stringify({
         coursId: id,
@@ -25,7 +25,7 @@ export const getComments = (id) => {
     dispatch({
       type: "comment/load/start",
     });
-    fetch(`http://localhost:3000/callback?coursId=${id}`)
+    fetch(`http://localhost:3001/callback?coursId=${id}`)
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -35,4 +35,3 @@ export const getComments = (id) => {
       });
   };
 };
-
